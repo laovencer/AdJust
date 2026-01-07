@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'pages/home_page.dart';
-
+import 'pages/about_page.dart';
+import 'pages/dashboard_page.dart';
+import 'pages/detection_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,12 +18,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Adjust',
       theme: ThemeData(
-        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
+        textTheme: GoogleFonts.poppinsTextTheme(),
         primarySwatch: Colors.purple,
       ),
-      initialRoute: '/',
-      onGenerateInitialRoutes: (String initialRouteName) {
-        return [MaterialPageRoute(builder: (_) => const HomePage())];
+      home: const HomePage(),
+      routes: {
+        '/home': (context) => const HomePage(),
+        '/about': (context) => const AboutPage(),
+        '/dashboard': (context) => const DashboardPage(),
+        '/detection': (context) => const DetectionPage(),
       },
     );
   }
