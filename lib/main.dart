@@ -19,7 +19,10 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
         primarySwatch: Colors.purple,
       ),
-      home: HomePage(),
+      initialRoute: '/',
+      onGenerateInitialRoutes: (String initialRouteName) {
+        return [MaterialPageRoute(builder: (_) => const HomePage())];
+      },
     );
   }
 }
