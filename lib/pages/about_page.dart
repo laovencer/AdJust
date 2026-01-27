@@ -49,8 +49,7 @@ class AboutPage extends StatelessWidget {
                         const SizedBox(height: 20.0),
                         Text(
                           'AdJust is a comprehensive platform designed to...\n\n'
-                          'Now that you have a reusable widget, you can use <CustomScroller> '
-                          'on your Dashboard, Settings, or any other page immediately.',
+                          'Now that you have a reusable widget, you can use <CustomScroller> ',
                           style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                             fontSize: 18,
                             height: 1.6,
